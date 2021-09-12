@@ -1,4 +1,5 @@
-import { startButton } from "./event_handlers.js";
-export const clickStartBtn = () => {
+import { startButton, submitButton } from "./event_handlers.js";
+export const clickBtn = () => {
   startButton();
+  submitButton();
 };
