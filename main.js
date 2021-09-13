@@ -115,6 +115,13 @@ async function getSearchValue() {
     fetchData(API_URL);
     const clearGreeting = getDOMElement(GREETING_ID);
     clearDOMElement(clearGreeting);
+    const clearError = getDOMElement("error");
+
+    //this if statement removes error message if a new query is provided.
+
+    if (clearError) {
+      clearError.innerHTML = "";
+    }
   });
 }
 
