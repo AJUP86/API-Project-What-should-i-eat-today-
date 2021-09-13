@@ -42,6 +42,7 @@ h1 {
   top: 50%;
   font-size: 1.5rem;
 }
+
 #greeting {
   font-size: 2rem;
   position: absolute;
@@ -93,6 +94,11 @@ section {
   grid-gap: 25px;
   grid-template: auto/repeat(auto-fit, minmax(300px, 1fr));
 }
+#error {
+  font-family: nunito;
+  font-size: 3rem;
+  text-align: center;
+}
 
 .recipe {
   width: 100%;
@@ -128,6 +134,9 @@ section {
   font-size: 1.4rem;
   margin-top: 20px;
   align-self: flex-start;
+}
+.recipe .btn:hover {
+  background-color: gray;
 }
 .calories {
   color: whitesmoke;
