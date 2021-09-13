@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-family: nunito;
+  font-size: 12px;
+  font-weight: 600;
+}
 body {
   background-color: #b3dee5;
   max-width: 80%;
-  height: 100vh;
   margin-left: 10%;
   display: flex;
   flex-direction: column;
@@ -18,7 +23,117 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 3rem;
 }
 #user-info {
   visibility: hidden;
+}
+.name-input label {
+  font-family: nunito;
+  font-size: 2rem;
+}
+.name-input .name {
+  font-family: nunito;
+  font-size: 1.5rem;
+}
+#startButton {
+  font-family: nunito;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+}
+#greeting {
+  font-size: 2rem;
+  position: absolute;
+  top: 80%;
+  padding: 2em;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0px;
+  visibility: hidden;
+}
+.container {
+  width: 90%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.search-input {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(223, 223, 223);
+  border-radius: 4px;
+}
+.search-input #search-bar {
+  width: 90%;
+  background-color: transparent;
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+}
+.search-input ion-icon {
+  width: 9%;
+  font-size: 3rem;
+  margin: -9px;
+  color: rgb(75, 75, 75);
+}
+
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto/repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.recipe {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #ffa101;
+  padding: 15px;
+  overflow: hidden;
+}
+.recipe img {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.recipe .recipe-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recipe .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.recipe .btn {
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #31525b;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  align-self: flex-start;
+}
+.calories {
+  color: whitesmoke;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
 }

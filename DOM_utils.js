@@ -29,3 +29,9 @@ export const createDOMElement = (tag, options) => {
 export const getDOMElement = (id) => {
   return document.getElementById(id);
 };
+
+// get query selector
+
+export const getElementByQuery = (selector) => {
+  return document.querySelector(selector);
+};

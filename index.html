@@ -10,17 +10,28 @@
   <body>
     <h1>What should I eat today?</h1>
     <div id="user-info">
-      <form>
-        <label for="name">Type your name:</label>
-        <input type="text" class="name" value="Name" />
+      <form class ="name-input">
+        <label for="name">Name:</label>
+        <input type="text" class="name" placeholder="Type your name..." />
       </form>
-      <select name="Type of diet" id="diet-type">
-        <optgroup
-          label="Choose your preferred meal plan:"
-          id="preference"
-        ></optgroup>
-      </select>
     </div>
+    <section>
+      <div class="container">
+        <form class="search-input">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Search your recipe..."
+          />
+          <ion-icon name="search-outline"></ion-icon>
+        </form>
+        <div class="search-result">
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
