@@ -98,6 +98,19 @@ section {
   font-family: nunito;
   font-size: 3rem;
   text-align: center;
+  color: red;
+}
+.search-result #httpError {
+  font-family: nunito;
+  font-size: 3rem;
+  text-align: center;
+  color: red;
+}
+.search-result #spinner {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin: auto;
 }
 
 .recipe {

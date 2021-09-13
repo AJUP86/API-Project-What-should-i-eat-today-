@@ -15,12 +15,35 @@ export let USER_NAME = "";
 
 async function fetchData(url) {
   try {
+    //The loader div
+
+    const spinnerDiv = document.querySelector(".search-result");
+    const spinnerGif = createDOMElement("img", { id: "spinner" });
+    const gif = "./pancake-spinner.gif";
+    spinnerGif.src = `${gif}`;
+    spinnerDiv.appendChild(spinnerGif);
+
+    //Here we start the fetching
+
     const response = await fetch(url);
     const data = await response.json();
-    getHtml(data.hits);
-    console.log(data);
+
+    // I set this setTimeOut() only to render the spinner in the presentation.
+
+    setTimeout(() => {
+      getHtml(data.hits);
+      console.log(data);
+    }, 3000);
+
+    //Here we continue the try catch code block.
   } catch (error) {
-    console.log(error.message);
+    const noInternet = document.querySelector(".search-result");
+    const httpErrorElement = createDOMElement("p", { id: "httpError" });
+    const httpError = new Error(
+      `Ups... something went wrong! ${error.message}`
+    );
+    httpErrorElement.innerHTML = httpError;
+    noInternet.appendChild(httpErrorElement);
   }
 }
 
