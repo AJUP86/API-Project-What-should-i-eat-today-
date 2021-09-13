@@ -23,6 +23,9 @@ async function fetchData(url) {
     console.log(error.message);
   }
 }
+
+//This function generates an HTML div container with the search result.
+
 const getHtml = (results) => {
   const searchResultsHtml = document.querySelector(".search-result");
   let html = "";
@@ -50,7 +53,8 @@ const renderStartButton = () => {
   button.addEventListener("click", clickBtn);
 };
 
-//This function stores the user name so after we can use it for display a message/
+//This function stores the user name so after we can use it for display a message
+
 const storeUserName = () => {
   const name = document.querySelector("form");
   name.addEventListener("submit", (e) => {
@@ -67,6 +71,7 @@ const storeUserName = () => {
 };
 
 //This function stores the search value
+
 async function getSearchValue() {
   const searchBar = document.querySelector(".search-input");
   searchBar.addEventListener("submit", (e) => {
