@@ -1,4 +1,7 @@
 import { startButton } from "./event_handlers.js";
-export const clickStartBtn = () => {
+
+// This function calls the event handler and is meant to be call in an AddEventListener method.
+
+export const clickBtn = () => {
   startButton();
 };
