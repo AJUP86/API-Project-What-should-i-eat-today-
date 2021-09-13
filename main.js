@@ -42,6 +42,17 @@ const getHtml = (results) => {
     </div>`;
   });
   searchResultsHtml.innerHTML = html;
+
+  //in this if block a message is display if an Error occurs while fetching the data enquired.
+
+  if (html === "") {
+    const errorMessage = createDOMElement("p", { id: "error" });
+    const error = new Error(
+      `There is no search results for "${QUERY}". Please try again.`
+    );
+    errorMessage.innerHTML = error;
+    searchResultsHtml.appendChild(errorMessage);
+  }
 };
 
 //This function creates and give functionality to the start button.
