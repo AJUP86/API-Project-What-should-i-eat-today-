@@ -37,10 +37,11 @@ h1 {
   font-size: 1.5rem;
 }
 #startButton {
+  width: 150px;
   font-family: nunito;
   position: absolute;
   top: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #greeting {
