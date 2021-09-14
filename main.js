@@ -32,7 +32,6 @@ async function fetchData(url) {
 
     setTimeout(() => {
       getHtml(data.hits);
-      console.log(data);
     }, 3000);
 
     //Here we continue the try catch code block.
@@ -104,6 +103,16 @@ const storeUserName = () => {
   });
 };
 
+//this function clear the search result
+const clearSearchResult = () => {
+  const newQuery = document.querySelector("#search-bar");
+  newQuery.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      const htmlElement = document.querySelector(".search-result");
+      htmlElement.innerHTML = "";
+    }
+  });
+};
 //This function stores the search value
 
 async function getSearchValue() {
@@ -128,10 +137,10 @@ async function getSearchValue() {
 //This function initialize the application.
 
 const init = () => {
-  console.log("hello");
   renderStartButton();
   storeUserName();
   getSearchValue();
+  clearSearchResult();
 };
 
 window.addEventListener("load", init);
